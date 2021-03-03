@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DERS 4</title>
+</head>
+<body>
+    <div>
+        @DateTime.Now.ToShortDateString()
+    </div>
+    <br />
+    <div>
+        @for (int i = 0; i < 10; i++)
+        {
+            @i
+            <br />
+        }
+    </div>
+    <br />
+    <div>
+        @{
+            var liste = new List<string>() { "Istanbul", "Bursa", "Adana", "İzmir" };
+        }
+        @{foreach (var li in liste)
+            {<span>@(liste.IndexOf(li) + 1) - @li</span><br />}
+        }
+
+    </div>
+
+
+</body>
+</html>
